@@ -1,0 +1,11 @@
+{
+  "name": "assignment45",
+  "version": "1.0.0",
+  "description": "Assignment 45 for CMPT 315",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Isra Jime",
+  "license": "ISC"
+}
