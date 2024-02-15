@@ -6,7 +6,11 @@ import { connectDB } from "./database/database.js";
 const app = express();
 const port = 8000;
 
+// connects to database
+
 connectDB();
+
+// followed example from learning-node lab
 
 app.use(bodyParser.urlencoded({extended: false}));
 
