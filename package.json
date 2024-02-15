@@ -1,11 +1,22 @@
 {
-  "name": "assignment45",
+  "name": "a45",
   "version": "1.0.0",
   "description": "Assignment 45 for CMPT 315",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "test": "npm run test"
   },
   "author": "Isra Jime",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.3",
+    "path": "^0.12.7"
+  },
+  "type": "module"
 }
