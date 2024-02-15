@@ -9,7 +9,7 @@ export const readMonster = async function (req,res) {
         const monster = await getMonsterFromRepository({_id: id});
         res.status(200).send(monster);
     } catch(e) {
-        res.status(500).send(e.message, 'Error: Failed to fetch Monster ${id}');
+        res.status(500).send(e.message, `Error: Failed to fetch Monster ${id}`);
     }
 }
 
@@ -38,9 +38,11 @@ export const deleteMonster = async function (req,res) {
             res.status(404).send(e.message, 'Error: Monster does not exist to delete')
         }
     } catch(e) {
-        res.status(500).send(e.message, 'Error: Failed to delete Monster ${id}');
+        res.status(500).send(e.message, `Error: Failed to delete Monster ${id}`);
     }
 }
+
+// Updates a single monster by id
 
 export const updateMonster = async function (req,res) {
     const {id} = req.params;
@@ -49,15 +51,18 @@ export const updateMonster = async function (req,res) {
         const monster = await updateMonsterFromRepository({_id: id, body});
         res.status(200).send(monster);
     } catch(e) {
-        res.status(500).send(e.message, 'Error: Failed to update Monster ${id}');
+        res.status(500).send(e.message, `Error: Failed to update Monster ${id}`);
     }
 }
+
+// adds a new monster to db
+
 export const addMonster = async function (req,res) {
     const {body} = req;
     try{
         const monster = await addMonsterToRepository(body);
         res.status(200).send(monster);
     } catch(e) {
-        res.status(500).send(e.message, 'Error: Failed to create new Monster ${id}');
+        res.status(500).send(e.message, `Error: Failed to create new Monster`);
     }
 }

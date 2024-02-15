@@ -15,5 +15,5 @@ app.use(bodyParser.json());
 app.use("/monsters",monsters);
 
 app.listen(port, function(){
-    console.log('App listening on port ${port}');
+    console.log(`App listening on port ${port}`);
 });

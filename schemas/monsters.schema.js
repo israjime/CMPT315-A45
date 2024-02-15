@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 
+// structure or model for dacuments 
+
 const MonstersSchema = new mongoose.Schema(
     {
         id: {type: Number},
